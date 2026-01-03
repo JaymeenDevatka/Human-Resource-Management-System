@@ -1,0 +1,480 @@
+/* src/styles/Payroll.css */
+:root {
+  --primary-color: #714B67;
+  --primary-hover: #5a3a52;
+  --border-color: #e2e8f0;
+  --text-color: #1e293b;
+  --text-muted: #64748b;
+  --success: #10B981;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  --bg-light: #f8fafc;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.2s ease;
+}
+
+/* Common Styles */
+.payroll-employee-view,
+.payroll-admin-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Employee View */
+.payslip-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.payslip-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+}
+
+.payslip-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.payslip-details {
+  padding: 1.5rem;
+}
+
+.payslip-employee-info {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.payslip-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.payslip-value {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.paid {
+  background-color: #ecfdf5;
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.status-badge.pending {
+  background-color: #fffbeb;
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.status-badge.draft {
+  background-color: #f1f5f9;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.payslip-amounts {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.amount-row.total {
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.amount-row.grand-total {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  border: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.amount-label {
+  color: var(--text-color);
+}
+
+.amount-value {
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 1rem 0;
+}
+
+/* Admin View */
+.payroll-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.pay-period-selector select {
+  min-width: 180px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filters-panel {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-group {
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.filter-actions {
+  margin-left: auto;
+  align-self: center;
+}
+
+.payroll-table-container {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.payroll-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payroll-table th,
+.payroll-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.payroll-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.payroll-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.employee-name {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.employee-id {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.net-salary {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.totals-row {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+.totals-row td {
+  padding: 0.75rem 1rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--border-color);
+}
+
+.btn-outline:hover {
+  background-color: #f8fafc;
+  border-color: var(--primary-color);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.btn-icon:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-icon.success {
+  color: var(--success);
+}
+
+.btn-icon.danger {
+  color: var(--danger);
+}
+
+.btn-icon.success:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.btn-icon.danger:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Form Controls */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(113, 75, 103, 0.25);
+}
+
+.input-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .payslip-employee-info {
+    gap: 1.5rem;
+  }
+  
+  .payslip-amounts {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .payroll-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .filters-panel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filter-actions {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .payroll-table th,
+  .payroll-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .employee-cell {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .payroll-employee-view,
+  .payroll-admin-view {
+    padding: 1rem;
+  }
+  
+  .payslip-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .payslip-employee-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .payroll-table {
+    font-size: 0.875rem;
+  }
+  
+  .payroll-table th,
+  .payroll-table td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}

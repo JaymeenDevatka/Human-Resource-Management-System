@@ -1,0 +1,401 @@
+/* Leave application page tweaks */
+.page-section .form-grid {
+	margin-top: 0.5rem;
+}
+
+.page-section .form-actions {
+	justify-content: flex-start;
+}
+
+/* Tabs Container */
+.tabs-container {
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+}
+
+.tabs-header {
+	display: flex;
+	border-bottom: 2px solid #e5e7eb;
+	background: #f9fafb;
+}
+
+.tab-btn {
+	flex: 1;
+	padding: 1rem;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-weight: 500;
+	color: #6b7280;
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.tab-btn:hover {
+	color: #3b82f6;
+	background: #f3f4f6;
+}
+
+.tab-btn.active {
+	color: #3b82f6;
+}
+
+.tab-btn.active::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: #3b82f6;
+}
+
+.tab-content {
+	padding: 2rem;
+}
+
+.card {
+	background: white;
+	border-radius: 12px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.card h2 {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	color: #1f2937;
+	font-size: 1.25rem;
+}
+
+/* Form Grid */
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-field.full {
+	grid-column: 1 / -1;
+}
+
+.form-field span {
+	font-weight: 500;
+	color: #374151;
+	font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+	padding: 0.75rem;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-family: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.field-hint {
+	font-size: 0.8rem;
+	color: #6b7280;
+	margin: 0;
+	margin-top: 0.25rem;
+}
+
+.form-actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: flex-start;
+	grid-column: 1 / -1;
+}
+
+.btn-primary,
+.btn-secondary {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.btn-primary {
+	background: #3b82f6;
+	color: white;
+}
+
+.btn-primary:hover {
+	background: #2563eb;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+	background: #f3f4f6;
+	color: #374151;
+	border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+	background: #e5e7eb;
+}
+
+/* Leave Balance Grid */
+.leave-balance-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+}
+
+.balance-card {
+	background: white;
+	border: 2px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+.balance-card:hover {
+	border-color: #3b82f6;
+	box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+	transform: translateY(-2px);
+}
+
+.balance-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.balance-header h3 {
+	margin: 0;
+	font-size: 1.1rem;
+	color: #1f2937;
+}
+
+.badge {
+	font-size: 0.8rem;
+	font-weight: 700;
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	background: #dbeafe;
+	color: #0c4a6e;
+}
+
+.badge.annual {
+	background: #dbeafe;
+	color: #0c4a6e;
+}
+
+.badge.sick {
+	background: #fee2e2;
+	color: #7f1d1d;
+}
+
+.badge.casual {
+	background: #fef3c7;
+	color: #92400e;
+}
+
+.badge.unpaid {
+	background: #e5e7eb;
+	color: #374151;
+}
+
+.balance-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.balance-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.9rem;
+}
+
+.balance-item span:first-child {
+	color: #6b7280;
+}
+
+.balance-item .value {
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.balance-item .value.used {
+	color: #f59e0b;
+}
+
+.balance-item .value.pending {
+	color: #8b5cf6;
+}
+
+.balance-bar {
+	margin: 1rem 0;
+}
+
+.bar-background {
+	height: 8px;
+	background: #e5e7eb;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.bar-used {
+	height: 100%;
+	background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+	border-radius: 4px;
+	transition: width 0.3s ease;
+}
+
+.balance-footer {
+	text-align: center;
+	padding-top: 1rem;
+	border-top: 1px solid #e5e7eb;
+	color: #10b981;
+	font-size: 0.95rem;
+}
+
+/* History Filters */
+.history-filters {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.history-filters select,
+.history-filters input {
+	padding: 0.75rem;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 0.95rem;
+}
+
+.history-filters select {
+	flex: 0 0 150px;
+}
+
+.history-filters input {
+	flex: 1;
+}
+
+/* History Table */
+.history-table {
+	overflow-x: auto;
+}
+
+.history-table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.history-table thead {
+	background: #f9fafb;
+	border-bottom: 2px solid #e5e7eb;
+}
+
+.history-table th {
+	padding: 1rem;
+	text-align: left;
+	font-weight: 600;
+	color: #374151;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.history-table tbody tr {
+	border-bottom: 1px solid #e5e7eb;
+	transition: all 0.3s ease;
+}
+
+.history-table tbody tr:hover {
+	background: #f9fafb;
+}
+
+.history-table td {
+	padding: 1rem;
+	color: #374151;
+	font-size: 0.95rem;
+}
+
+.status-badge {
+	display: inline-block;
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.status-badge.pending {
+	background: #fef3c7;
+	color: #92400e;
+}
+
+.status-badge.approved {
+	background: #d1fae5;
+	color: #065f46;
+}
+
+.status-badge.rejected {
+	background: #fee2e2;
+	color: #7f1d1d;
+}
+
+.empty-state {
+	text-align: center;
+	padding: 2rem;
+	color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.tabs-header {
+		flex-direction: column;
+	}
+
+	.form-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.history-filters {
+		flex-direction: column;
+	}
+
+	.history-filters select {
+		flex: 1;
+	}
+
+	.history-table {
+		font-size: 0.85rem;
+	}
+
+	.history-table th,
+	.history-table td {
+		padding: 0.75rem 0.5rem;
+	}
+}
+

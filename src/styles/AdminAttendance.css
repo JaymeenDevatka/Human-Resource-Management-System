@@ -1,0 +1,509 @@
+.admin-attendance {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.section-header .eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+}
+
+.section-header .muted {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.present {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.stat-card.half {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.stat-card.absent {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.stat-card.total {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.stat-percent {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* Card Container */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Filters */
+.filters-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.filters-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.search-box svg {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.date-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.date-filter span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.date-filter input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.date-filter input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.status-filter {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  min-width: 130px;
+}
+
+.status-filter:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Table */
+.table-card {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.record-count {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.attendance-table thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.attendance-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.attendance-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attendance-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.attendance-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.emp-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.time {
+  font-family: 'Monaco', 'Courier New', monospace;
+  color: #6b7280;
+}
+
+.work-hours {
+  font-weight: 500;
+  color: #374151;
+}
+
+.remarks {
+  color: #6b7280;
+  font-size: 0.9rem;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.present {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.halfday {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.absent {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.4rem 0.75rem;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.4rem;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Issues Card */
+.issues-card {
+  padding: 1.5rem;
+}
+
+.issues-card h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.issue-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+}
+
+.issue-item.warning {
+  background-color: #fef3c7;
+  border-left-color: #f59e0b;
+}
+
+.issue-item.critical {
+  background-color: #fee2e2;
+  border-left-color: #ef4444;
+}
+
+.issue-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.issue-content {
+  flex: 1;
+}
+
+.issue-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.issue-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.resolve-btn {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.resolve-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-controls {
+    gap: 0.75rem;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-attendance {
+    padding: 1rem;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .filters-content {
+    flex-direction: column;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-box input,
+  .date-filter input,
+  .status-filter,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .attendance-table {
+    min-width: 900px;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .remarks {
+    display: none;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .issue-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .resolve-btn {
+    width: 100%;
+  }
+}

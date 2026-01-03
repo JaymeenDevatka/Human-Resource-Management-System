@@ -1,0 +1,12 @@
+/* Leave approval page tweaks */
+.page-section .table-head {
+	grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+}
+
+.page-section .table-row {
+	grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+}
+
+.page-section .table-actions {
+	justify-content: flex-start;
+}
