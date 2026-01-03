@@ -1,0 +1,399 @@
+/* Global theme tokens for the app shell */
+:root {
+	--surface-bg: #f5f7fb;
+	--surface-alt: #eef1f7;
+	--card: #ffffff;
+	--card-border: #e5e9f2;
+	--shadow-soft: 0 12px 35px rgba(50, 50, 93, 0.08);
+	--shadow-strong: 0 20px 60px rgba(50, 50, 93, 0.12);
+	--primary: #6e48aa;
+	--primary-2: #56348c;
+	--text-strong: #0f172a;
+	--text-muted: #64748b;
+	--success: #16a34a;
+	--warning: #f59e0b;
+	--danger: #e11d48;
+	--radius-lg: 18px;
+	--radius-md: 12px;
+	--radius-sm: 8px;
+}
+
+body {
+	background: radial-gradient(circle at 10% 10%, #f1ecff 0%, transparent 40%),
+							radial-gradient(circle at 85% 5%, #e5f0ff 0%, transparent 35%),
+							linear-gradient(180deg, var(--surface-bg) 0%, #f9fafc 60%, #f5f7fb 100%);
+	color: var(--text-strong);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--text-strong);
+	letter-spacing: -0.01em;
+}
+
+.page-surface {
+	background: var(--card);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-soft);
+}
+
+.card-quiet {
+	background: var(--card);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-md);
+	box-shadow: 0 8px 25px rgba(50, 50, 93, 0.06);
+}
+
+/* Shared page surfaces */
+.page-section {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: clamp(1rem, 2vw, 1.5rem);
+	color: var(--text-strong);
+}
+
+.page-section .section-header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.page-section .section-header h1 {
+	font-size: clamp(1.6rem, 3vw, 1.9rem);
+	margin: 0;
+	font-weight: 700;
+}
+
+.page-section .eyebrow {
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-size: 0.75rem;
+	color: var(--text-muted);
+	margin: 0;
+	font-weight: 700;
+}
+
+.page-section .muted {
+	margin: 0;
+	color: var(--text-muted);
+	font-size: 0.97rem;
+}
+
+.page-section .card {
+	background: var(--card);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-soft);
+	padding: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.page-section .card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.page-section .card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+}
+
+.page-section .stat-card {
+	padding: 1.1rem;
+	background: var(--card);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-md);
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.page-section .stat-card .label {
+	color: var(--text-muted);
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin: 0 0 0.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.page-section .stat-card h2 {
+	margin: 0;
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+.page-section .pill-switch {
+	display: inline-flex;
+	padding: 0.2rem;
+	background: var(--surface-alt);
+	border-radius: 999px;
+	border: 1px solid var(--card-border);
+	gap: 0.15rem;
+}
+
+.page-section .pill-switch button {
+	border: none;
+	background: transparent;
+	padding: 0.55rem 1.1rem;
+	border-radius: 999px;
+	font-weight: 700;
+	color: var(--text-muted);
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-section .pill-switch button.active {
+	background: linear-gradient(120deg, var(--primary), var(--primary-2));
+	color: #fff;
+	box-shadow: 0 10px 30px rgba(110, 72, 170, 0.25);
+}
+
+.page-section .form-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.page-section .form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.page-section .form-field span,
+.page-section .label {
+	font-weight: 700;
+	color: var(--text-strong);
+	font-size: 0.95rem;
+}
+
+.page-section .value {
+	margin: 0.1rem 0 0;
+	color: var(--text-muted);
+	font-weight: 600;
+}
+
+.page-section input,
+.page-section select,
+.page-section textarea {
+	border: 1px solid var(--card-border);
+	border-radius: 12px;
+	padding: 0.8rem 0.95rem;
+	font-size: 1rem;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+	background: #fff;
+}
+
+.page-section textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.page-section input:focus,
+.page-section select:focus,
+.page-section textarea:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(110, 72, 170, 0.18);
+}
+
+.page-section .form-field.full {
+	grid-column: 1 / -1;
+}
+
+.page-section .form-actions {
+	display: flex;
+	justify-content: flex-end;
+	grid-column: 1 / -1;
+}
+
+.page-section .btn-primary {
+	background: linear-gradient(120deg, var(--primary), var(--primary-2));
+	color: #fff;
+	border: none;
+	border-radius: 12px;
+	padding: 0.85rem 1.4rem;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 16px 35px rgba(110, 72, 170, 0.2);
+	transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.page-section .btn-primary:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 18px 40px rgba(110, 72, 170, 0.24);
+}
+
+.page-section .btn-ghost {
+	background: #fff;
+	color: var(--text-strong);
+	border: 1px solid var(--card-border);
+	border-radius: 12px;
+	padding: 0.82rem 1.3rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+	transition: transform 0.12s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.page-section .btn-ghost:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+	border-color: #d8deeb;
+}
+
+.page-section .btn-link {
+	background: none;
+	border: none;
+	color: var(--primary);
+	font-weight: 700;
+	cursor: pointer;
+	padding: 0.35rem 0.4rem;
+}
+
+.page-section .btn-link:hover {
+	color: var(--primary-2);
+	text-decoration: underline;
+}
+
+.page-section .table {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.page-section .table-head,
+.page-section .table-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.page-section .table-head {
+	font-weight: 700;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 0.78rem;
+}
+
+.page-section .table-row {
+	background: #fff;
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-md);
+	padding: 0.85rem 1rem;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.page-section .table-actions {
+	display: inline-flex;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.page-section .pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.35rem 0.75rem;
+	border-radius: 999px;
+	font-weight: 700;
+	font-size: 0.85rem;
+	border: 1px solid transparent;
+	background: var(--surface-alt);
+	color: var(--text-muted);
+}
+
+.page-section .pill.present,
+.page-section .pill.approved,
+.page-section .pill.processed {
+	background: #ecfdf3;
+	color: #047857;
+	border-color: #bef0d0;
+}
+
+.page-section .pill.absent,
+.page-section .pill.reject,
+.page-section .pill.rejected {
+	background: #fff1f2;
+	color: #b91c1c;
+	border-color: #fecdd3;
+}
+
+
+.page-section .pill.half-day,
+.page-section .pill.leave,
+.page-section .pill.pending {
+	background: #fff7ed;
+	color: #c2410c;
+	border-color: #fed7aa;
+}
+
+.page-section .pill.pending {
+	background: #fef9c3;
+	color: #a16207;
+	border-color: #fef08a;
+}
+
+.page-section .pill.weekly,
+.page-section .pill.info {
+	background: #eff6ff;
+	color: #1d4ed8;
+	border-color: #c7d2fe;
+}
+
+.page-section .table .pill {
+	justify-self: start;
+}
+
+.page-section .table.payroll-table .table-row {
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.page-section .profile-card {
+	background: var(--card);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-lg);
+	padding: 1.25rem;
+	box-shadow: var(--shadow-soft);
+}
+
+.page-section .profile-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--card-border);
+}
+
+.page-section .profile-row:last-child {
+	border-bottom: none;
+}
+
+.page-section .admin-note {
+	margin-top: 0.5rem;
+	padding: 0.75rem 1rem;
+	background: #f1f5f9;
+	border: 1px dashed var(--card-border);
+	border-radius: var(--radius-md);
+	color: var(--text-muted);
+	font-weight: 600;
+}
+
+@media (max-width: 640px) {
+	.page-section {
+		padding: 1rem;
+	}
+
+	.page-section .table-head,
+	.page-section .table-row {
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 0.6rem;
+	}
+}

@@ -1,0 +1,99 @@
+.footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+  color: #1f2937;
+  background: #f9fafb;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.footer__logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.footer__text {
+  color: #4b5563;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.footer__section h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.footer__section a {
+  display: block;
+  color: #374151;
+  margin: 0.25rem 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer__section a:hover {
+  color: #111827;
+}
+
+.footer__form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer__form input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.footer__form button {
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.footer__form button:hover {
+  background: #4338ca;
+}
+
+.footer__bottom {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__links a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: #111827;
+}

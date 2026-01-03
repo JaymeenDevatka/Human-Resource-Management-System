@@ -1,0 +1,179 @@
+/* Attendance page refinements */
+.page-section .section-header {
+	align-items: flex-start;
+	gap: 0.25rem;
+}
+
+.page-section .card-grid {
+	margin-bottom: 0.5rem;
+}
+
+.page-section .table-head span,
+.page-section .table-row span {
+	min-width: 0;
+}
+
+/* Today's Card */
+.today-card {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	margin-bottom: 2rem;
+	border: none;
+}
+
+.today-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.today-header > div:first-child {
+	flex: 1;
+}
+
+.today-card .label {
+	margin: 0;
+	font-size: 0.9rem;
+	opacity: 0.9;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.today-card h2 {
+	margin: 0.5rem 0;
+	font-size: 2rem;
+}
+
+.today-card .muted {
+	margin: 0;
+	opacity: 0.9;
+	font-size: 0.95rem;
+}
+
+.check-buttons {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.btn-check-in,
+.btn-check-out,
+.btn-checked {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.75rem 1.5rem;
+	border: 2px solid white;
+	border-radius: 8px;
+	background: transparent;
+	color: white;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.btn-check-in:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+}
+
+.btn-check-out {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: #ef4444;
+	color: #ef4444;
+}
+
+.btn-check-out:hover {
+	background: #ef4444;
+	color: white;
+}
+
+.btn-checked {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: white;
+	cursor: not-allowed;
+	opacity: 0.8;
+}
+
+.check-info {
+	display: flex;
+	gap: 2rem;
+	padding-top: 1rem;
+}
+
+.check-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.check-item .label {
+	font-size: 0.8rem;
+	opacity: 0.8;
+	text-transform: uppercase;
+}
+
+.check-item .time {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+/* Pill Styles */
+.pill {
+	display: inline-block;
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.pill.present {
+	background: #d1fae5;
+	color: #065f46;
+}
+
+.pill.absent {
+	background: #fee2e2;
+	color: #7f1d1d;
+}
+
+.pill.half-day {
+	background: #fef3c7;
+	color: #92400e;
+}
+
+.pill.leave {
+	background: #dbeafe;
+	color: #0c4a6e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.today-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.check-buttons {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.btn-check-in,
+	.btn-check-out,
+	.btn-checked {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.check-info {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}
+
